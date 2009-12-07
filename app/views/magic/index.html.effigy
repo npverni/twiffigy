@@ -1,0 +1,5 @@
+class MagicIndexView < Effigy::Rails::View
+  def transform
+    text('h1', @spell)
+  end
+end
