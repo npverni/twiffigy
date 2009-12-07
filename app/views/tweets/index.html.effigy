@@ -1,0 +1,9 @@
+class TweetsIndexView < Effigy::Rails::View
+	def	transform
+    text('h1', 'Tweets')	  
+    replace_each('div.tweet', @tweets) do |tweet|
+      text('strong', tweet.from_user)
+      text('p', tweet.text)
+    end
+  end
+end
